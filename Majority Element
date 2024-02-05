@@ -1,0 +1,14 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        unique=list(set(nums))
+        max=0
+        for i in unique:
+            count=nums.count(i)
+            if max<count:
+                max=count
+                number=i
+        return number        
